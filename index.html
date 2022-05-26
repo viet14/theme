@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root">
+        <div class="wrapper">
+            <div class="view">
+                <header class="header flex">
+                    <div class="brand">
+                        <a href="#">Houses</a>
+                    </div>
+                    <div class="nav flex">
+                        <div class="nav_list">
+                            <a href="#" class="nav_item focus">About us</a>
+                            <a href="#" class="nav_item">Projects</a>
+                            <a href="#" class="nav_item">News</a>
+                            <a href="#" class="nav_item">Contact us</a>
+                        </div>
+                        <div class="nav_option flex">
+                            <div class="nav_option_wrapper">
+                                <object type="image/svg+xml" data="./assets/icon/user.svg"></object>
+                            </div>
+                            <div class="nav_option_wrapper">
+                                <object type="image/svg+xml" data="./assets/icon/search.svg"></object>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="container">
+                    <div class="content">
+                        <div class="content_wrapper flex">
+                            <div class="left">
+                                <div class="vertical_text">
+                                    <div class="sidebar_active"></div>
+                                    <span>Instagram</span>
+                                </div>
+                                <div class="vertical_text">
+                                    <div class="sidebar_active"></div>
+                                    <span>Behance</span>
+                                </div>
+                            </div>
+                            <div class="center">
+                                <div class="timing">2022</div>
+                                <div class="title">
+                                    <h1>Natural Environment</h1>
+                                </div>
+                                <div class="description">
+                                    This is an awesome combination of steel and nature. Excellent 
+                                    place away from civilization and whole crowded where are designers
+                                    wanted to keep integrity width nature. The place created for you
+                                    and your world. There is no time...
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="right_box flex">
+                                    <span>01</span>
+                                    <div class="progress_wrapper">
+                                        <div class="progress"></div>
+                                    </div>
+                                    <span>02</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button flex">
+                        <a href="#">Explore</a>
+                    </div>
+                </div>
+                <footer class="footer flex">
+                    <div class="footer_left flex">
+                        <div class="footer_item">
+                            <p class="title">Architect</p>
+                            <p class="author">Alexander Kovpak</p>
+                        </div>
+                        <div class="footer_item">
+                            <p class="title">Architect</p>
+                            <p class="author">Sergey Makhno</p>
+                        </div>
+                        <div class="footer_item">
+                            <p class="title">Location</p>
+                            <p class="author">Carpathians</p>
+                        </div>
+                    </div>
+                    <div class="footer_right flex">
+                        <div class="arrow_wrapper">
+                            <object  type="image/svg+xml" data="./assets/icon/chevron-left.svg"></object>
+                        </div>
+                        <div class="arrow_wrapper">
+                            <object  type="image/svg+xml" data="./assets/icon/chevron-right.svg"></object>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var sidebarItems = document.querySelectorAll('.vertical_text');
+    var sidebarActive = document.querySelectorAll('.sidebar_active');
+    sidebarActive[0].classList.add('active');
+    console.log(sidebarItems[0].classList);
+    sidebarItems[0].addEventListener('click', function(e) {
+        sidebarActive[0].classList.add('active');
+        sidebarActive[1].classList.remove('active');
+    })
+    sidebarItems[1].addEventListener('click', function(e) {
+        sidebarActive[1].classList.add('active');
+        sidebarActive[0].classList.remove('active');
+    })
+</script>
+</html>
